@@ -1,8 +1,11 @@
 'use client'
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import Link from 'next/link';
 
 export default function Hero() {
+
+    const constraintsRef = useRef(null);
 
     return (
         <div className="w-full h-screen flex flex-col justify-center items-center gap-8">
@@ -14,7 +17,7 @@ export default function Hero() {
                     transition={{ duration:1, ease: 'easeInOut'}}
                     className="leading-[6rem] lg:text-[6rem] md:text-[5rem]"
                 >
-                    Sam
+                    SAM
                 </motion.h1>
                 <div className='lg:text-[1.5rem] md:text-[1rem] font-normal flex flex-row'>
                     <motion.h2
@@ -22,21 +25,21 @@ export default function Hero() {
                         animate={{ y:0, opacity:1}}
                         transition={{ duration:1, ease: 'easeInOut', delay:1}} 
                     >
-                        The World Developer
+                        Software Engineer
                     </motion.h2>
                     <motion.h2
                         initial={{ y:25, opacity:0}}
                         animate={{ y:0, opacity:1}}
                         transition={{ duration:1, ease: 'easeInOut', delay:2}}
                     >
-                        , The Master of Backend
+                        , The Master of Backend Dev
                     </motion.h2>
                     <motion.h2
                         initial={{ y:25, opacity:0}}
                         animate={{ y:0, opacity:1}}
                         transition={{ duration:1, ease: 'easeInOut', delay:3}}
                     >
-                        , and The Universe Data Handler
+                        , and the Junior of Frontend
                     </motion.h2>
 
                 </div>
@@ -47,13 +50,17 @@ export default function Hero() {
                 animate={{ y:0, opacity:1}}
                 transition={{ duration:1, ease: 'easeInOut', delay:4}}
             >
-                <motion.div 
-                    whileHover={{ scale: 1.1}}
-                    className="border py-2 px-6 rounded-xl text-sm  shadow-inner-white border-neutral-800 cursor-none hover:bg-neutral-200 hover:text-neutral-800"
-                >
-                    Turn code into reality
+                <motion.div ref={constraintsRef} className="border border-white p-5 rounded-full">
+                    <motion.div
+                    drag
+                    dragConstraints={constraintsRef}
+                    className="cursor-grab bg-emerald-400 p-3 rounded-full text-white text-center text-xl"
+                    >
+                    Turn code into Reality
+                    </motion.div>
+                    <p className="mt-2 text-sm text-center text-gray-400">Drag it!</p>
                 </motion.div>
-            </motion.div>
+                </motion.div>
 
             {/* PROGRAMING LANGUAGE */}
             <div className='p-6 flex flex-row gap-6 h-32 w-full justify-center'>
@@ -64,7 +71,7 @@ export default function Hero() {
                     className='flex justify-center'
                 >
                     <div 
-                        className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-neutral-200 hover:text-[#3178C6] hover:p-3 transition-all ease-in-out delay-50"
+                        className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-emerald-300 hover:text-[#3178C6] hover:p-3 transition-all ease-in-out delay-50"
                     >
                         <svg 
                             width="60" 
@@ -84,7 +91,7 @@ export default function Hero() {
                     className='flex justify-center'
                 >
                     <div
-                        className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center cursor-none hover:bg-neutral-200 hover:p-3 transition-all delay-50 text-white custom-hover "
+                        className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center cursor-none hover:bg-emerald-300 hover:p-3 transition-all delay-50 text-white custom-hover "
                     >
                         <svg 
                             width="60" 
@@ -112,7 +119,7 @@ export default function Hero() {
                     transition={{ duration:1, ease: 'easeInOut', delay:5.2}}
                     className='flex justify-center'
                 >
-                    <div className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-neutral-200 hover:text-[#336791] hover:p-3 transition-all ease-in-out delay-50"
+                    <div className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-emerald-300 hover:text-[#336791] hover:p-3 transition-all ease-in-out delay-50"
                     >
                         <svg 
                             fill="currentColor" 
@@ -134,7 +141,7 @@ export default function Hero() {
                     transition={{ duration:1, ease: 'easeInOut', delay:5.3}}
                     className='flex justify-center'
                 >
-                    <div className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-neutral-200 hover:text-orange-500 hover:p-3 transition-all ease-in-out delay-50"
+                    <div className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-emerald-300 hover:text-orange-500 hover:p-3 transition-all ease-in-out delay-50"
                     >
                         <svg 
                             width="60" 
@@ -153,7 +160,7 @@ export default function Hero() {
                     transition={{ duration:1, ease: 'easeInOut', delay:5.4}}
                     className='flex justify-center'
                 >
-                    <div className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-neutral-200 custom-hover hover:p-3 transition-all ease-in-out delay-50"
+                    <div className="w-20 border bg-neutral-900 border-neutral-900 p-4 rounded-xl shadow-inner-white flex items-center  cursor-none text-white hover:bg-emerald-300 custom-hover hover:p-3 transition-all ease-in-out delay-50"
                     >
                         <svg 
                             width="60" 
