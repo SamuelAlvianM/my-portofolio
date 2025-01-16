@@ -44,14 +44,14 @@ html {
 }
 
 .cursor-circle {
-  position: fixed; /* Make sure the cursor follows the mouse */
+  position: absolute; /* Make sure the cursor follows the mouse */
   width: 60px; /* Adjust the size of the circle */
   height: 60px;
   border-radius: 50%; /* Make it a circle */
-  border: 1px solid #fff; /* Circle border color */
+  border: 1px solid #47fd6f; /* Circle border color */
   pointer-events: none; /* Make sure it doesn't interfere with clicks */
   transform: translate(-50%, -50%); /* Center the circle around the cursor */
-  transition: ease-out 0.2s; /* Optional: Smooth transition for background color */
+  transition: ease-out 0.1s; /* Optional: Smooth transition for background color */
   
 }
 

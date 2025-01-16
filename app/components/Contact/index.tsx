@@ -1,3 +1,5 @@
+
+
 import Link from "next/link";
 import { githubPath } from './paths/githubPath';
 import { linkedinPath } from "./paths/linkedinPath";
@@ -83,7 +85,7 @@ export default function Contact() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    mailto:oensam07@gmail.com
+                                    oensam07@gmail.com
                                 </Link>
                             </div>
                         </div>

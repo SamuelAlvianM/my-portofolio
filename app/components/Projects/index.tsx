@@ -56,17 +56,8 @@ export default function Projects() {
                             height={500}
                             className="rounded-sm"
                         >
-                            
                         </Image>
                     </div>
-                    {/* <div className="h-full w-1/4 flex flex-col justify-between">
-                    <div className="bg-purple-500 rounded-full m-1 ml-4 p-6 text-white">Python</div>
-                    <div className="bg-purple-500 rounded-full m-1 ml-4 p-6 text-white">Flask</div>
-                    <div className="bg-purple-500 rounded-full m-1 ml-4 p-6 text-white">MySQL</div>
-                    <div className="bg-purple-500 rounded-full m-1 ml-4 p-6 text-white">React</div>
-                    <div className="bg-purple-500 rounded-full m-1 ml-4 p-6 text-white">Railway</div>
-                    <div className="bg-purple-500 rounded-full m-1 ml-4 p-6 text-white">Docker</div>
-                    </div> */}
                 </div>
             </Link>
 
