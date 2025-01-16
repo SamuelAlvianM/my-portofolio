@@ -10,7 +10,7 @@ export default function Contact() {
     return (
         <div className="m-5 h-full flex flex-col items-center">
             <div className="text-neutral-300 m-5 py-20 px-40 gap-8 bg-neutral-950 h-[40vh] w-full rounded-xl border-1 border-neutral-950 flex flex-col justify-start items-center">
-                <h1 className="text-5xl font-bold">Let's get in touch</h1>
+                <h1 className="text-5xl font-bold">Let&apos;s get in touch</h1>
                 <div className="w-full flex flex-row justify-center gap-10">
                     
                     {/* GITHUB LINK */}
