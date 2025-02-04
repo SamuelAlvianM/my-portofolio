@@ -36,14 +36,14 @@ export default function Hero() {
                         animate={{ y:0, opacity:1}}
                         transition={{ duration:1, ease: 'easeInOut', delay:2}}
                     >
-                        , The Master of Backend Dev
+                        , Main Backend Developer
                     </motion.h2>
                     <motion.h2
                         initial={{ y:25, opacity:0}}
                         animate={{ y:0, opacity:1}}
                         transition={{ duration:1, ease: 'easeInOut', delay:3}}
                     >
-                        , and the Junior of Frontend
+                        , and the Junior Frontend
                     </motion.h2>
 
                 </div>
