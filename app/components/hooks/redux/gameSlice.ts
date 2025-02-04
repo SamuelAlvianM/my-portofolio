@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { initBoard, winningSituation, makeMove, switchPlayer } from '../../utils/index';
+import { initBoard, winningSituation, makeMove, switchPlayer } from '@/app/components/utils';
 
 
 interface GameState {

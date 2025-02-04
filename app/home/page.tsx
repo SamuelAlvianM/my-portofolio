@@ -4,8 +4,8 @@ import { Hero, Projects, Contact, CustomCursor, TicTacToe } from "../components"
 import { useEffect } from "react";
 import { AnimatePresence, motion } from 'framer-motion';
 import type { AppProps } from "next/app";
-import {Provider} from 'react-redux';
-import konteks_redux_ttt from "../components/hooks/redux/index";
+import Image from 'next/image';
+import Link from "next/link";
 
 export default function Homepage() {
     useEffect( () => {
@@ -19,7 +19,6 @@ export default function Homepage() {
     }, [])
     
     return (
-        <Provider store={konteks_redux_ttt}>
             <AnimatePresence mode="wait">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -35,10 +34,23 @@ export default function Homepage() {
                             <Hero />
                         </div>
                         <section className="text-center py-10">
-                            
-                            <div className="mt-1">
-                                
-                                <TicTacToe />
+                            <h1 className="text-2xl font-bold mb-5">My Games</h1>
+                            <div className="flex flex-wrap justify-center gap-4">
+                            <Link href="/tic-tac-toe-p">
+                                <motion.div
+                                    whileHover={{ y: [-5, 5, -5], transition: { duration: 1, repeat: Infinity, repeatType: "reverse" } }}
+                                    className="flex flex-col items-center cursor-pointer"
+                                >
+                                    <Image
+                                        src="/tictactoe.png"
+                                        alt="Tic-Tac-Toe"
+                                        width={200}
+                                        height={200}
+                                        className="rounded-full"
+                                    />
+                                    <p className="text-xl font-bold text-yellow-400">Tic-Tac-Toe</p>
+                                </motion.div>
+                            </Link>
                             </div>
                         </section>
                         <div>
@@ -50,6 +62,6 @@ export default function Homepage() {
                     </div>
                 </motion.div>
             </AnimatePresence>
-        </Provider>
+
     )
 };
