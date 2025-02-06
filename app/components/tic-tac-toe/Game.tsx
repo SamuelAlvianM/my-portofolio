@@ -1,5 +1,5 @@
 'use client';
-import Board from './design/Board';
+import Board from '@/app/components/tic-tac-toe/design/Board';
 import { RootState } from '../hooks/redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { playTurn, resetGame } from '../hooks/redux/gameSlice';

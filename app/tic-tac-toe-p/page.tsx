@@ -2,7 +2,6 @@
 
 'use client';
 import dynamic from 'next/dynamic';
-import Game from '../components/tic-tac-toe/Game';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const GameWithNoSSR = dynamic(
