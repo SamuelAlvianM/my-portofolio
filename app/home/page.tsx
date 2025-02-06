@@ -1,6 +1,6 @@
 'use client'
 
-import { Hero, Projects, Contact, CustomCursor, TicTacToe } from "../components";
+import { Hero, Projects, Contact, CustomCursor} from "../components";
 import { useEffect } from "react";
 import { AnimatePresence, motion } from 'framer-motion';
 import type { AppProps } from "next/app";
@@ -42,7 +42,7 @@ export default function Homepage() {
                                     className="flex flex-col items-center cursor-pointer"
                                 >
                                     <Image
-                                        src="/tictactoe.png"
+                                        src="/o.png"
                                         alt="Tic-Tac-Toe"
                                         width={200}
                                         height={200}

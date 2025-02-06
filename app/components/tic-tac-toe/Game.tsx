@@ -1,21 +1,18 @@
-import Board from './design/board';
-
-import { RootState,  playTurn, resetGame } from '../hooks/index';
+'use client';
+import Board from './design/Board';
+import { RootState } from '../hooks/redux/store';
 import { useDispatch, useSelector } from 'react-redux';
-
-// import { initBoard,  winningSituation, makeMove, switchPlayer} from '../utils/index';
-
+import { playTurn, resetGame } from '../hooks/redux/gameSlice';
 import Link from 'next/link';
+import { useState } from 'react';
 
-
-const Game = () => {
-
+const GameContent = () => {
     const dispatch = useDispatch();
     const { board, currentPlayer, winner, isDraw} = useSelector(
         (state: RootState) => state.game
     );
 
-    const handleCells = ( row: number, col: number) => {
+    const handleCells = (row: number, col: number) => {
         dispatch(playTurn({ row, col }));
     };
 
@@ -25,8 +22,7 @@ const Game = () => {
 
     return (
         <div className="flex flex-col items-center justify-center gap-3 min-h-screen">
-            <h1 className="text-3xl font-bold">Mini Games</h1>
-            <p className="text-lg text-gray-600">This game is built by myself, enjoy!</p>
+            <h1>Main XO XO GAS</h1>
             <Board board={board} onCellClick={handleCells} />
             <p>
                 {winner
@@ -37,11 +33,23 @@ const Game = () => {
                 }
             </p>
 
-            <button onClick={handleReset} className="bg-cyan-400 text-black px-4 py-2 rounded ">
+            <button onClick={handleReset} className="bg-cyan-400 text-black px-4 py-2 rounded">
                 Reset Game
             </button>
             <Link href='/'>Back to Home</Link>
         </div>
+    );
+};
+
+// Wrap the game content with the Redux provider
+import { Provider } from 'react-redux';
+import { store } from '../hooks/redux/store';
+
+const Game = () => {
+    return (
+        <Provider store={store}>
+            <GameContent />
+        </Provider>
     );
 };
 
